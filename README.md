@@ -48,28 +48,7 @@ To avoid class imbalance, the dataset was balanced to include **42,640 samples p
 
 The following data processing pipeline was implemented:
 
-```
-Raw Amazon Dataset
-        ↓
-Initial Data Inspection
-        ↓
-Data Preparation
-(Label Mapping & Cleaning)
-        ↓
-Balanced Dataset
-        ↓
-Train/Test Split
-        ↓
-Baseline Model
-(TF-IDF + Logistic Regression)
-        ↓
-Transformer Model
-(DistilBERT)
-        ↓
-Model Evaluation
-```
-
----
+![Model Comparison](images/model_comparison.png)
 
 # Models Implemented
 
@@ -179,18 +158,6 @@ torch.cuda.is_available()
 
 This enabled GPU acceleration for transformer training.
   
-
-# Repository Structure
-
-```
-Customer Review Sentiment Analysis with NLP
-│
-├── data
-├── models
-├── notebooks
-├── reports
-└── images
-```
   
 # Trained Models:
 Trained transformer models are not included in the repository due to file size limitations.

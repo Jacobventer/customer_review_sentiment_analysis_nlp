@@ -27,7 +27,7 @@ This project builds a sentiment analysis pipeline consisting of:
 ## Dataset
 
 The project uses an Amazon customer reviews dataset containing **568,454 product reviews**.  
-[Data Set] (https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews)
+[Data Set](https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews)
 
 Each review includes:
 

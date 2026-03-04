@@ -95,7 +95,8 @@ Accuracy achieved:
 | DistilBERT Transformer | 0.83 |
 
 The transformer model significantly outperformed the classical NLP approach due to its ability to capture contextual relationships between words.
-  
+![Model Comparison](images/Model_Performance_Comparison.png)
+
 ## Example Prediction
 
 The trained transformer model can classify new customer reviews.

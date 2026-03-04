@@ -183,7 +183,7 @@ This enabled GPU acceleration for transformer training.
 # Repository Structure
 
 ```
-amazon-review-sentiment-analysis
+Customer Review Sentiment Analysis with NLP
 │
 ├── data
 ├── models

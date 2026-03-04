@@ -94,7 +94,7 @@ Accuracy achieved:
 | TF-IDF + Logistic Regression | 0.76 |
 | DistilBERT Transformer | 0.83 |
 
-The transformer model significantly outperformed the classical NLP approach due to its ability to capture contextual relationships between words.
+The transformer model significantly outperformed the classical NLP approach due to its ability to capture contextual relationships between words.  
 ![Model Comparison](images/Model_Performance_Comparison.png)
 
 ## Example Prediction

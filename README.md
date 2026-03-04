@@ -48,7 +48,7 @@ To avoid class imbalance, the dataset was balanced to include **42,640 samples p
 
 The following data processing pipeline was implemented:
 
-![Model Comparison](images/model_comparison.png)
+![Model Comparison](images/Model_Performance_Comparison.png)  
 
 # Models Implemented
 

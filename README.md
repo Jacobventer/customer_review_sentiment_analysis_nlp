@@ -116,6 +116,39 @@ Accuracy achieved:
 
 The transformer model significantly outperformed the classical NLP approach due to its ability to capture contextual relationships between words.
   
+# Example Prediction
+
+The trained transformer model can classify new customer reviews.
+
+Example 1:
+
+```
+Input Review:
+"This product is amazing and works perfectly."
+
+Model Prediction:
+Sentiment → Positive
+Confidence → 0.93
+```
+
+Example 2:
+
+```
+Input Review:
+"The product quality is not good and I would not recommend it."
+
+Model Prediction:
+Sentiment → Negative
+Confidence → 0.975
+```
+
+
+Users can test their own reviews using the notebook:
+
+```
+notebooks/demo_sentiment_prediction.ipynb
+```
+
 
 # Iterative Optimization
 

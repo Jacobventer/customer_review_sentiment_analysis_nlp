@@ -1,4 +1,4 @@
-# Amazon Review Sentiment Analysis
+# Customer Review Sentiment Analysis with NLP
 
 This project implements a complete sentiment analysis pipeline for Amazon customer reviews using Natural Language Processing (NLP) and deep learning techniques.
 
@@ -10,13 +10,12 @@ The goal of the project is to automatically classify customer reviews into three
 
 The system compares a traditional machine learning approach with a modern transformer-based model to evaluate performance improvements.
 
----
-
 # Project Overview
 
-Customer reviews provide valuable insights for companies, but manually analyzing thousands of reviews is inefficient. Sentiment analysis allows automated classification of textual feedback to understand customer satisfaction and product perception.
+Customer reviews provide valuable insights for companies, but manually analyzing thousands of reviews is inefficient.  
+Sentiment analysis allows automated classification of textual feedback to understand customer satisfaction and product perception.  
 
-This project builds a sentiment analysis pipeline consisting of:
+This project builds a sentiment analysis pipeline consisting of:  
 
 1. Data inspection and preprocessing
 2. Baseline machine learning model
@@ -24,11 +23,10 @@ This project builds a sentiment analysis pipeline consisting of:
 4. Model evaluation and comparison
 5. Iterative optimization
 
----
 
 # Dataset
 
-The project uses an Amazon customer reviews dataset containing **568,454 product reviews**.
+The project uses an Amazon customer reviews dataset containing **568,454 product reviews**.  
 
 Each review includes:
 
@@ -45,7 +43,6 @@ The ratings are converted into three sentiment categories:
 
 To avoid class imbalance, the dataset was balanced to include **42,640 samples per class**.
 
----
 
 # Project Pipeline
 
@@ -88,30 +85,27 @@ Purpose:
 Accuracy achieved:
 
 **76%**
-
----
+  
 
 ## Transformer Model
 
-A fine-tuned **DistilBERT transformer model** was used for sentiment classification.
-
-Advantages:
+A fine-tuned **DistilBERT transformer model** was used for sentiment classification.  
+  
+Advantages:  
 
 - Contextual word embeddings
 - Better handling of negation and mixed sentiment
 - Improved language understanding
 
-Training configuration:
-
+Training configuration:  
+  
 - Batch size: 16
 - Epochs: 2
 - GPU acceleration (NVIDIA GTX 1650)
 
-Accuracy achieved:
-
-**83%**
-
----
+Accuracy achieved:  
+ 
+**83%**  
 
 # Model Comparison
 
@@ -121,8 +115,7 @@ Accuracy achieved:
 | DistilBERT Transformer | 0.83 |
 
 The transformer model significantly outperformed the classical NLP approach due to its ability to capture contextual relationships between words.
-
----
+  
 
 # Iterative Optimization
 
@@ -133,8 +126,7 @@ Optimization performed:
 - Increased training epochs from **2 → 3**
 
 This experiment demonstrates the iterative improvement phase of the project.
-
----
+  
 
 # Technical Challenge
 
@@ -153,8 +145,7 @@ torch.cuda.is_available()
 ```
 
 This enabled GPU acceleration for transformer training.
-
----
+  
 
 # Repository Structure
 
@@ -167,10 +158,9 @@ amazon-review-sentiment-analysis
 ├── reports
 └── images
 ```
+  
 
----
-
-# Technologies Used
+# Libraries Used
 
 Python libraries used in this project:
 
@@ -181,9 +171,7 @@ Python libraries used in this project:
 - Datasets
 - Matplotlib
 - Seaborn
-
----
-
+  
 # Author
 
 Jaco Venter  

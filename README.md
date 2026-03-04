@@ -124,11 +124,11 @@ Example 1:
 
 ```
 Input Review:
-"This product is amazing and works perfectly."
+"I enjoy my coffee machine and it makes awesome coffee"
 
 Model Prediction:
 Sentiment → Positive
-Confidence → 0.93
+Confidence → 0.988
 ```
 
 Example 2:
@@ -141,7 +141,7 @@ Model Prediction:
 Sentiment → Negative
 Confidence → 0.975
 ```
-
+This demonstates negation handling in the model
 
 Users can test their own reviews using the notebook:
 

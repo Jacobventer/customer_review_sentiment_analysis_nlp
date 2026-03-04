@@ -10,7 +10,7 @@ The goal of the project is to automatically classify customer reviews into three
 
 The system compares a traditional machine learning approach with a modern transformer-based model to evaluate performance improvements.
 
-# Project Overview
+## Project Overview
 
 Customer reviews provide valuable insights for companies, but manually analyzing thousands of reviews is inefficient.  
 Sentiment analysis allows automated classification of textual feedback to understand customer satisfaction and product perception.  
@@ -24,9 +24,10 @@ This project builds a sentiment analysis pipeline consisting of:
 5. Iterative optimization
 
 
-# Dataset
+## Dataset
 
 The project uses an Amazon customer reviews dataset containing **568,454 product reviews**.  
+[Data Set] (https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews)
 
 Each review includes:
 
@@ -44,15 +45,15 @@ The ratings are converted into three sentiment categories:
 To avoid class imbalance, the dataset was balanced to include **42,640 samples per class**.
 
 
-# Project Pipeline
+## Project Pipeline
 
 The following data processing pipeline was implemented:
 
 ![Model Comparison](images/Model_Performance_Comparison.png)  
 
-# Models Implemented
+## Models Implemented
 
-## Baseline Model
+### Baseline Model
 
 TF-IDF vectorization with Logistic Regression.
 
@@ -66,7 +67,7 @@ Accuracy achieved:
 **76%**
   
 
-## Transformer Model
+### Transformer Model
 
 A fine-tuned **DistilBERT transformer model** was used for sentiment classification.  
   
@@ -86,7 +87,7 @@ Accuracy achieved:
  
 **83%**  
 
-# Model Comparison
+## Model Comparison
 
 | Model | Accuracy |
 |------|------|
@@ -95,11 +96,11 @@ Accuracy achieved:
 
 The transformer model significantly outperformed the classical NLP approach due to its ability to capture contextual relationships between words.
   
-# Example Prediction
+## Example Prediction
 
 The trained transformer model can classify new customer reviews.
 
-Example 1:
+### Example 1:
 
 ```
 Input Review:
@@ -110,7 +111,7 @@ Sentiment → Positive
 Confidence → 0.988
 ```
 
-Example 2:
+### Example 2:
 
 ```
 Input Review:
@@ -129,7 +130,7 @@ notebooks/demo_sentiment_prediction.ipynb
 ```
 
 
-# Iterative Optimization
+## Iterative Optimization
 
 An additional experiment was conducted to evaluate model performance with increased training iterations.
 
@@ -140,7 +141,7 @@ Optimization performed:
 This experiment demonstrates the iterative improvement phase of the project.
   
 
-# Technical Challenge
+## Technical Challenge
 
 During development, a GPU configuration issue occurred.
 
@@ -159,14 +160,14 @@ torch.cuda.is_available()
 This enabled GPU acceleration for transformer training.
   
   
-# Trained Models:
+## Trained Models:
 Trained transformer models are not included in the repository due to file size limitations.
 
 Models can be reproduced by running:
 
 notebooks/transformer_model.ipynb
 
-# Libraries Used
+## Libraries Used
 
 Python libraries used in this project:
 
@@ -178,7 +179,10 @@ Python libraries used in this project:
 - Matplotlib
 - Seaborn
   
-# Author
+## Author
+Jaco Venter
 
-Jaco Venter  
-Artificial Intelligence Portfolio Project
+BSc Data Science 
+International University of Applied Science (Germany)
+
+[LinkedIn Profile](https://www.linkedin.com/in/jaco-venter-45502a162/)

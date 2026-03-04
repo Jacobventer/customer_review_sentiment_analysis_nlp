@@ -192,6 +192,12 @@ amazon-review-sentiment-analysis
 └── images
 ```
   
+# Trained Models:
+Trained transformer models are not included in the repository due to file size limitations.
+
+Models can be reproduced by running:
+
+notebooks/transformer_model.ipynb
 
 # Libraries Used
 

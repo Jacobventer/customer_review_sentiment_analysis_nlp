@@ -138,8 +138,7 @@ An additional experiment was conducted to evaluate model performance with increa
 Optimization performed:
 
 - Increased training epochs from **2 → 3**
-
-This experiment demonstrates the iterative improvement phase of the project.
+- Accuracy improved from 82.67% to 83.43% 
   
 
 ## Technical Challenge

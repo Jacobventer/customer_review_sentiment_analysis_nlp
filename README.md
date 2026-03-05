@@ -23,9 +23,23 @@ project-root
 │ ├── 06_evaluation_comparison.ipynb
 │ ├── 07_demo_sentiment_prediction.ipynb
 │
+├── models
+│ ├── distilbert_3class_balanced_v1
+│ ├── distilbert_3class_v2_optimized
+│
 ├── images
+│ ├── Confusion_matrix_transformer_model.png
+│ ├── pDistribution_of_reviews.png
+│ ├── Original_rating_Distribution.png
+│ ├── Workflow_diagram.png
 │ ├── project_pipeline.png
 │ ├── Model_Performance_Comparison.png
+│
+├── data
+│ ├── test.csv
+│ ├── train.csv.zip
+│
+├── requirements.txt
 │
 └── README.md
 ```

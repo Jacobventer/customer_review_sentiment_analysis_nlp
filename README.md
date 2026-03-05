@@ -8,20 +8,43 @@ The goal of the project is to automatically classify customer reviews into three
 - Neutral
 - Positive
 
-The system compares a traditional machine learning approach with a modern transformer-based model to evaluate performance improvements.
+The project compares a traditional machine learning approach with a modern transformer-based model to evaluate improvements in sentiment classification performance.
+
+## Project structure
+```bash
+project-root
+│
+├── notebooks
+│ ├── 01_initial_inspection.ipynb
+│ ├── 02_data_preparation.ipynb
+│ ├── 03_baseline_model.ipynb
+│ ├── 04_transformer_model.ipynb
+│ ├── 05_transformer_optimization.ipynb
+│ ├── 06_evaluation_comparison.ipynb
+│ ├── 07_demo_sentiment_prediction.ipynb
+│
+├── images
+│ ├── project_pipeline.png
+│ ├── Model_Performance_Comparison.png
+│
+└── README.md
+```
+The project was implemented entirely using **Jupyter Notebooks**, which document each stage of the machine learning pipeline.
 
 ## Project Overview
 
 Customer reviews provide valuable insights for companies, but manually analyzing thousands of reviews is inefficient.  
 Sentiment analysis allows automated classification of textual feedback to understand customer satisfaction and product perception.  
 
-This project builds a sentiment analysis pipeline consisting of:  
+This project builds a full NLP pipeline consisting of:
 
-1. Data inspection and preprocessing
-2. Baseline machine learning model
-3. Transformer-based deep learning model
-4. Model evaluation and comparison
-5. Iterative optimization
+1. Data inspection and exploratory analysis
+2. Data preprocessing and class balancing
+3. Baseline machine learning model
+4. Transformer-based deep learning model
+5. Model evaluation and comparison
+6. Iterative optimization of the transformer model
+7. Live sentiment prediction demo
 
 
 ## Dataset
@@ -29,7 +52,7 @@ This project builds a sentiment analysis pipeline consisting of:
 The project uses an Amazon customer reviews dataset containing **568,454 product reviews**.  
 [Data Set](https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews)
 
-Each review includes:
+The dataset includes:
 
 - Review text
 - Star rating (1–5)
@@ -42,14 +65,14 @@ The ratings are converted into three sentiment categories:
 | 3 | Neutral |
 | 4–5 | Positive |
 
-To avoid class imbalance, the dataset was balanced to include **42,640 samples per class**.
-
+To avoid class imbalance during training, the dataset was balanced to include **42,640 samples per class**.
+Total training dataset size used in modeling: **127,920 reviews**
 
 ## Project Pipeline
 
 The following data processing pipeline was implemented:
 
-![Model Comparison](images/project_pipeline.png)  
+![Model Comparison](images/Workflow_diagram.png)  
 
 ## Models Implemented
 
@@ -70,31 +93,53 @@ Accuracy achieved:
 ### Transformer Model
 
 A fine-tuned **DistilBERT transformer model** was used for sentiment classification.  
+DistilBERT is a lightweight version of BERT that provides strong language understanding while requiring fewer computational resources.  
   
-Advantages:  
+Advantages:
 
 - Contextual word embeddings
-- Better handling of negation and mixed sentiment
-- Improved language understanding
+- Better handling of negation
+- Improved understanding of sentence structure
+- Better performance on complex reviews
 
-Training configuration:  
-  
+Training configuration:
+
 - Batch size: 16
+- Sequence length: 128 tokens
+- Learning rate: 2e-5
 - Epochs: 2
 - GPU acceleration (NVIDIA GTX 1650)
 
 Accuracy achieved:  
  
-**83%**  
+**82.6%**  
 
-## Model Comparison
+## Iterative Optimization
+
+An optimization experiment was performed to evaluate the impact of longer training.  
+
+Optimization applied:
+
+- Increased training epochs from **2 → 3**
+
+Result:
+
+Accuracy improved from:
+
+**82.67% → 83.43%**
+
+This demonstrates the impact of iterative model tuning during the development phase.
+
+## Model Performance Comparison
 
 | Model | Accuracy |
 |------|------|
 | TF-IDF + Logistic Regression | 0.76 |
-| DistilBERT Transformer | 0.83 |
+| DistilBERT (2 epochs) | 0.826 |
+| DistilBERT Optimized (3 epochs) | 0.834 |
 
 The transformer model significantly outperformed the classical NLP approach due to its ability to capture contextual relationships between words.  
+
 ![Model Comparison](images/Model_Performance_Comparison.png)
 
 ## Example Prediction
@@ -112,7 +157,7 @@ Sentiment → Positive
 Confidence → 0.988
 ```
 
-### Example 2:
+### Example 2 (Negation):
 
 ```
 Input Review:
@@ -122,24 +167,11 @@ Model Prediction:
 Sentiment → Negative
 Confidence → 0.975
 ```
-This demonstates negation handling in the model
+This demonstates negation handling in the model.  
 
-Users can test their own reviews using the notebook:
+Users can test their own reviews using:
+notebooks/07_demo_sentiment_prediction.ipynb
 
-```
-notebooks/demo_sentiment_prediction.ipynb
-```
-
-
-## Iterative Optimization
-
-An additional experiment was conducted to evaluate model performance with increased training iterations.
-
-Optimization performed:
-
-- Increased training epochs from **2 → 3**
-- Accuracy improved from 82.67% to 83.43% 
-  
 
 ## Technical Challenge
 
@@ -165,7 +197,9 @@ Trained transformer models are not included in the repository due to file size l
 
 Models can be reproduced by running:
 
-notebooks/transformer_model.ipynb
+notebooks/04_transformer_model.ipynb
+and
+notebooks/05_transformer_optimization.ipynb
 
 ## Libraries Used
 
@@ -175,7 +209,7 @@ Python libraries used in this project:
 - scikit-learn
 - PyTorch
 - HuggingFace Transformers
-- Datasets
+- HuggingFace Datasets
 - Matplotlib
 - Seaborn
   
